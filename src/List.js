@@ -15,7 +15,13 @@ export default function List() {
             <h1>Inspiring sculptors:</h1>
             <ol>
                 {artists.map(artist => (
-                    <li key={artist.id}> {artist.name} {' '} </li>
+                    <li key={artist.id}> {artist.name} {' '}
+                     <button onClick={() => {
+                        setArtists(
+                            artists.filter(a => a.id !== artist.id)
+                        )
+                     }} >Delete</button>
+                     </li>
                 ))}
             </ol>
 
