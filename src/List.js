@@ -12,12 +12,12 @@ export default function List() {
         <input 
          value={name} onChange={e => setName(e.target.value)} />
         
-          <button onClick={() => {
-            artists.push({
-                id: nextId++,
-                name : name,
-            })
-          }}>ADD ALL</button>
+         <button onClick={() => {
+            setArtists([
+                ...artists,
+                {id: nextId++, name: name}
+            ])
+         }} >ADD NEW ONE'S</button>
 
            <ul>
             {artists.map(artist => (
