@@ -16,27 +16,16 @@ export default function List() {
 
             <ul>
                  {artists.map(artist => (
-                    <li key={artist.id} > {artist.name} 
-                    
+                    <li key={artist.id} > {artist.name} {' '}
+                    <button onClick={() => {
+                          setArtists(
+                           artists.filter(elem => elem.id !== artist.id)
+                          )
+                    }} >delete</button>
                      </li>
                  ))}
 
             </ul>
-
-
-            {/* <ol>
-                {artists.map(artist => (
-                    <li key={artist.id}> {artist.name} {' '}
-                     <button onClick={() => {
-                        setArtists(
-                            artists.filter(a => a.id !== artist.id)
-                        )
-                     }} >Delete this object</button>
-                     </li>
-                ))}
-            </ol> */}
-
-
         </>
     )
 }
