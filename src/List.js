@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-let nextId = 0;
+let initialArtists = [
+  { id: 0, name: 'Marta Colvin Andrade' },
+  { id: 1, name: 'Lamidi Olonade Fakeye'},
+  { id: 2, name: 'Louise Nevelson'},
+];
 
 export default function List() {
     const[name, setName] = useState('');
@@ -12,13 +16,7 @@ export default function List() {
         <input 
          value={name} onChange={e => setName(e.target.value)} />
         
-         <button onClick={() => {
-            setArtists([
-             
-                {id: nextId++, name: name},
-                   ...artists,
-            ])
-         }} >ADD NEW ONE'S</button>
+
 
            <ul>
             {artists.map(artist => (
