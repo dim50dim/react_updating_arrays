@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import List from './List';
+import List from './components/List';
+import ShapeEditor from './components/ShapeEditor';
 
 function App() {
   return (
    <>
-   <List/>
+   <ShapeEditor />
    </>
   );
 }

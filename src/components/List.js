@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function List() {
 
-    const [artists, setArtists] = useState(initialArtists);
+    const [artists, setArtists] = useState();
 
     return(
         <>
