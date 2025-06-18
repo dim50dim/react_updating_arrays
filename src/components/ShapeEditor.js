@@ -18,5 +18,25 @@ export default function ShapeEditor() {
         });
           setShapes(nextShapes)
     }
-  
+  return (
+    <>
+       <button onClick={handleClick} > Move circle down </button>
+       {shapes.map(shape => (
+        <div
+              key={shape.id}
+              style={{
+                background: 'purple',
+                position : 'absolute',
+                left: shape.x,
+                top: shape.y,
+                borderRadius: 
+                shape.type === 'circle'
+                 ? '50%' : '',
+                 width : 20,
+                 height : 20,
+              }}
+         ></div>
+       ))}
+    </>
+  )
 }
